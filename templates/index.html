@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Network</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/profiles">Profiles</a></li>
+                <li><a href="/recommendations">Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>Create Profile</h2>
+                <form action="/create-profile" method="POST">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="number" name="age" placeholder="Age" required>
+                    <button type="submit">Create</button>
+                </form>
+            </div>
+            <div class="card">
+                <h2>Connect with Friends</h2>
+                <form action="/connect-friends" method="POST">
+                    <input type="text" name="your_username" placeholder="Your Username" required>
+                    <input type="text" name="friend_username" placeholder="Friend's Username" required>
+                    <button type="submit">Connect</button>
+                </form>
+            </div>
+            <div class="card">
+                <h2>Get Friend Recommendations</h2>
+                <form action="/recommendations" method="POST">
+                    <input type="text" name="username" placeholder="Your Username" required>
+                    <button type="submit">Get Recommendations</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Futuristic Social Network</p>
+    </footer>
+</body>
+
+</html>
